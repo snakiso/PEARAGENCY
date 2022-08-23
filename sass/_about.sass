@@ -1,0 +1,72 @@
+.about
+ h1
+  text-transform: uppercase
+  font-size: 112px
+  font-weight: 800
+  letter-spacing: -0.06em
+  margin: 100px 0 0 0
+ h3
+  font-size: 32px
+  max-width: 600px
+  margin: 10px 0 0 0
+ &__text
+  position: relative
+  display: flex
+  justify-content: flex-end
+  column-gap: 50px
+  margin-top: 100px
+  p
+   max-width: 400px
+   font-weight: 500
+   margin: 0
+   span
+    color: rgba(84, 52, 202, 1) 
+    font-weight: 700
+ &__text::before
+  content: '' 
+  position: absolute
+  height: 2px
+  width: 25px
+  background: black
+  left: 0
+  top: 10px
+ &__photo
+  margin-top: 100px  
+  img
+    width: 100%  
+ &__definition
+  position: relative
+  h3
+   font-size: 24px 
+   max-width: 800px 
+   margin: 100px 50px
+ &__definition::before
+  content: ''
+  position: absolute
+  height: 100%
+  width: 4px
+  background: rgba(84, 52, 202, 1) 
+@media screen and ( max-width: 900px )
+  .about
+    h1  
+      font-size: 56px
+      max-width: 272px
+      line-height: 40px
+      margin: auto
+    h3
+      font-size: 16px
+      max-width: 272px
+      margin: 40px auto 100px
+    &__text
+      flex-direction: column
+      font-size: 14px  
+      row-gap: 30px
+      max-width: 224px
+      margin-left: 40px
+    &__text::before
+      left: -40px
+      top: 8px
+    &__definition
+      h3
+        max-width: 240px
+        font-size: 14px  

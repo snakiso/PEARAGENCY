@@ -1,0 +1,259 @@
+.services
+ h2
+  font-size: 56px
+  font-weight: 800
+  margin: 100px  auto 145px
+  max-width: 920px
+ .preview-mobile 
+  display: none
+ &__preview
+  max-width: 2560px
+  display: flex
+  column-gap: 30px
+  margin-bottom: 170px
+  img
+   width: 100%
+ &__preview-text
+   max-width: 350px
+   display: flex
+   flex-direction: column
+   justify-content: center
+   h3
+    font-size: 45px
+    font-weight: 800
+    letter-spacing: -0.06em
+    text-transform: uppercase
+    margin: 0
+   p
+    font-weight: 500
+    max-height: 150px
+    margin-left: 50px
+   a
+    position: relative
+    font-weight: 700
+    letter-spacing: 0.4em
+    font-size: 12px
+    margin-left: 50px 
+    margin-top: 50px
+    max-width: 160px
+   a:before 
+    content: ''
+    background: black
+    position: absolute
+    height: 1px
+    width: 25px
+    top: 50%
+    right: 0
+    left: auto
+ &__offer
+  max-width: 920px
+  margin: auto
+  .offer-item
+   max-height: 55px
+   overflow: hidden
+   margin-bottom: 25px !important
+   transition: all 0.5s
+  h3
+   font-size: 34px
+   margin-bottom: 60px
+  .offer-item-title 
+   display: flex
+   align-items: center
+   column-gap: 25px 
+   h4
+    font-size: 20px
+    margin: 0
+    max-width: 500px
+  .offer-item-button
+   position: relative
+   width: 48px
+   height: 48px
+   cursor: pointer
+   img
+    position: absolute
+    z-index: 1
+   .minus
+    position: absolute
+    height: 1px
+    top:50%
+    left: 50% 
+    width: 17px
+    transform: translate(-50%, -50%)
+   .minus:before
+    content: ''
+    height: 2px
+    width: 17px
+    top: 0.5px
+    background: rgba(84, 52, 202, 1)
+    position: absolute 
+    transform: rotate(90deg)
+    transition: all 0.5s
+   .active.minus:before
+    transform: rotate(0deg) 
+  ul
+   margin-top:50px
+   li
+    position: relative
+    padding-bottom: 20px
+    font-weight: 500
+    max-width: 500px
+    margin-left: 70px
+    padding-left: 50px
+   li:before
+    position: absolute
+    content: ''
+    width: 25px
+    height: 2px
+    background: black  
+    top: 10px 
+    left: 0
+ &__cases
+  max-width: 920px
+  margin: auto
+  h3
+   margin-top: 160px
+   font-size: 45px
+  .services-slider
+   height: 100%
+   max-width: 920px
+   position: relative
+   overflow: hidden
+   .swiper-pagination 
+    margin-top: 25px
+    text-align: end
+   .swiper-pagination-bullet
+    transition: 0.8s cubic-bezier(0.225, 1, 0.316, 0.99)
+    border-radius: 100%
+    transform: scale(0.5)
+    display: inline-block
+    width: 15px
+    height: 15px
+    background: rgba(217, 217, 217, 1)
+   .swiper-pagination-bullet:nth-child(1)
+    margin: 0 10px
+   .swiper-pagination-bullet:nth-child(2)
+    margin: 0 20px 0 10px
+   .swiper-pagination-bullet-active
+    background: black 
+   .swiper-wrapper
+    height: 509px !important
+    display: flex
+   .swiper-slide
+    position: relative 
+    height: 100%
+    display: flex
+    flex-shrink: 0
+    width: 100%
+    .slide-img
+     position: relative
+     max-width: 755px
+     margin-left: auto
+     margin-right: 0
+     span
+      position: absolute
+      width: 35%
+      height: 100%
+      background: rgba(241, 255, 104, 1) 
+      left: 0 
+    .slide-text
+     max-width: 350px
+     position: absolute
+     top: 50%
+     left: 60px
+     transform: translateY(-50%)
+     p
+      font-size: 34px
+     a
+      font-size: 12px
+      letter-spacing: 0.4em
+      position: relative
+      width: 170px
+     a:before
+      content: ''
+      position: absolute
+      height: 1px
+      width: 25px
+      background: black
+      right: -40px
+      top: 7px   
+
+@media screen and ( max-width: 1920px )
+ .services
+   &__preview
+    max-width: 1400px
+    
+@media screen and ( max-width: 1200px )    
+ .services
+   h2
+    padding-left: 25px
+   &__preview
+    max-width: 1400px
+    flex-direction: column
+    align-items: center
+   &__preview-text
+    margin-top: 25px 
+   .preview-mobile
+    display: block
+   .preview-desktop
+    display: none 
+   &__offer
+    h3 
+      padding-left: 25px   
+    .offer-item 
+      padding-left: 25px
+   &__cases
+    h3
+      padding-left: 25px     
+@media screen and ( max-width: 900px )    
+ .services__cases .services-slider
+   max-width: 760px
+   margin: auto
+@media screen and ( max-width: 768px )  
+ .services
+   h2
+    font-size: 45px
+    margin: 90px 0 100px 0
+   &__preview-text
+    h3
+      font-size: 35px
+    p
+      font-size: 14px  
+      max-width: 208px
+    a
+      margin-top: 100px    
+   &__offer    
+    h3
+      font-size: 24px
+      text-align: center
+    .offer-item
+      max-height: 60px 
+      padding-left: 0
+      max-width: calc(100% - 48px)  
+      margin: auto
+      h4
+        max-width: 200px
+        font-size: 14px
+      ul
+        margin-top: 20px  
+        li
+          font-size: 12px
+          margin-left: 25px  
+   &__cases
+    .services-slider
+      max-width: 272px
+      .swiper-slide
+        .slide-img
+          max-height: 235px
+          img
+            position: relative
+            width: 101%
+            left: -4px
+          span
+            bottom: 0
+            width: 100%
+            height: 30%
+        .slide-text
+          max-width: 280px
+          left: 0
+          p
+            font-size: 24px          
