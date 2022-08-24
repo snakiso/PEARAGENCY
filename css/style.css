@@ -1720,4 +1720,41 @@ a {
   .contacts__methods a {
     font-size: 20px;
   }
+}
+.nav-mobile {
+  position: fixed;
+  min-height: 100vh;
+  width: 70%;
+  background: rgb(40, 44, 52);
+  z-index: 10;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  left: -100%;
+  top: 0;
+}
+.nav-mobile__img {
+  height: 70px;
+  border-bottom: 1px solid white;
+}
+.nav-mobile__img img {
+  padding: 16px 0 0 25px;
+}
+.nav-mobile ul {
+  padding-top: 50px;
+  padding-left: 25px;
+}
+.nav-mobile ul li {
+  padding-bottom: 50px;
+}
+.nav-mobile ul li a {
+  color: white;
+}
+.nav-mobile .vk-nav {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+
+.nav-mobile.active {
+  left: 0;
 }/*# sourceMappingURL=style.css.map */

@@ -16,25 +16,39 @@
 </head>
 
 <body>
+    <header class="header">
+        <div class="menu-open">
+            <span class="hamburger"></span>
+        </div>
+        <div class="header__logo">
+            <a href="index.html"><img src="./img/header-logo.svg" alt=""></a>
+        </div>
+        <a href="tel:+7907128303" class="header__phone">+7 (906) 712 83 03</a>
+        <nav class="header__nav">
+            <ul>
+                <li class="active"><a href="about.html">О нас</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="cases.html">Кейсы</a></li>
+                <li><a href="blog.html">Блог</a></li>
+            </ul>
+        </nav>
+        <a href="contacts.html"> <button class="button header__button">контакты</button></a>
+    </header>
+    <nav class="nav-mobile">
+        <div class="nav-mobile__img">
+            <img src="./img/nav-mobile.svg" alt="">
+        </div>
+        <ul>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="services.html">Услуги</a></li>
+            <li><a href="cases.html">Кейсы</a></li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <a href="#" class="vk-nav"><img src="./img/vk-nav.svg" alt=""></a>
+    </nav>
     <div class="page-wrapper">
-        <header class="header">
-            <div class="menu-open">
-                <span class="hamburger"></span>
-            </div>
-            <div class="header__logo">
-                <a href="index.html"><img src="./img/header-logo.svg" alt=""></a>
-            </div>
-            <a href="tel:+7907128303" class="header__phone">+7 (906) 712 83 03</a>
-            <nav class="header__nav">
-                <ul>
-                    <li class="active"><a href="about.html">О нас</a></li>
-                    <li ><a href="services.html">Услуги</a></li>
-                    <li><a href="cases.html">Кейсы</a></li>
-                    <li><a href="blog.html">Блог</a></li>
-                </ul>
-            </nav>
-            <a href="contacts.html"> <button class="button header__button">контакты</button></a>
-        </header>
+        
         <main class="about">
             <h1>Pear Agency</h1>
             <h3>Знаем всё о продвижении мероприятий</h3>
@@ -111,6 +125,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/burger.js"></script>
 </body>
 
 </html>
