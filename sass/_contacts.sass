@@ -1,5 +1,7 @@
 .contacts
  background: rgba(40, 44, 52, 1)
+ &__logo-mobile
+  display: none
  &__wrapper
   max-width: 920px
   padding: 80px 0
@@ -28,5 +30,31 @@
    height:63px
    width: 63px
   a:last-child
-   margin-left: 25px   
- 
+   margin-left: 25px
+
+@media screen and ( max-width: 900px ) 
+  .contacts
+    &__wrapper
+      padding-left: 20px
+      padding-right: 20px
+    &__logo-mobile
+      display: block
+      margin-bottom: 30px
+      width: 130px
+      height: 55px
+      img
+        width: 100%
+    &__logo-desktop
+      display: none   
+    &__block
+      margin-top: 50px         
+    &__title
+     color: white
+     h2
+      font-size: 56px
+      line-height: 40px
+     h4
+       font-size: 34px 
+    &__methods
+      a
+        font-size: 20px  

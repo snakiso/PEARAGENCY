@@ -6,6 +6,9 @@
    display: flex
    margin-bottom: 160px
    justify-content: space-between
+  .example-img
+    img
+      width: 100% 
   .example-mirror
    flex-direction: row-reverse 
   .example-content
@@ -53,3 +56,14 @@
     background: black
     top: calc( 50% - 2px )
     right: -50px
+
+@media screen and ( max-width: 900px ) 
+  .examples
+    .example
+      flex-direction: column-reverse
+      align-items: center
+    .example-text
+      max-width: 270px
+      position: relative 
+      h3
+        font-size: 34px       

@@ -51,4 +51,21 @@
      top: 7px
      background: black
  
-
+@media screen and ( max-width: 900px ) 
+  .reviews
+    &__wrapper
+      .reviews-slider
+        .swiper-slide
+          flex-direction: column-reverse
+          align-items: center
+          row-gap: 25px
+          p
+            font-size: 14px
+            max-width: calc( 100% -  40px ) !important
+            margin: auto
+          h5
+            font-size: 12px !important
+            max-width: calc( 100% -  90px ) !important 
+            margin-left: 70px !important
+        .swiper-pagination  
+          margin-left: 20px   
