@@ -11,11 +11,12 @@
     background-image: url('../img/bg-photo.png')
     height: 100%
     position: absolute
-    width: 75%
+    width: 68%
     left: 0
     background-repeat: no-repeat
     opacity: 0.2
     background-attachment: fixed
+    background-size: contain
  &__container
   max-width: 900px
   color: white
@@ -52,6 +53,9 @@
  .widecard
   &__bg
     width: 75%
+    .bg-photo
+      width: 75%
+      background-size: cover
 @media screen and ( max-width: 900px ) 
  .widecard
   min-height: 780px

@@ -1,0 +1,51 @@
+.deg-anim
+ transform: translateY(24px) skewX(-15deg)
+ transform-origin: 0 0
+ transition: opacity .4s,transform 1.2s
+ will-change: opacity,transform
+ opacity: 0
+.deg-anim.animated
+ opacity: 1
+ transform: none
+.slide-down
+ position: relative
+ transform: scaleY(0)
+ transform-origin: top
+ transition: all 0.5s
+.slide-down.animated
+ transform: scaleY(1)
+.slide-left
+ position: relative
+ transform: scaleX(0)
+ transform-origin: left
+ transition: all 0.5s
+.slide-left.animated
+ transform: scaleX(1)
+.slide-up
+ opacity: 0
+ transform: translateY(100px)
+ transition: opacity .6s, transform .6s
+ will-change: opacity,transform 
+.slide-up.animated
+ opacity: 1
+ transform: none
+.tr-delay-1
+ transition-delay: .1s
+.tr-delay-2
+ transition-delay: .2s 
+.tr-delay-3
+ transition-delay: .3s
+.tr-delay-4
+ transition-delay: .4s
+.tr-delay-5
+ transition-delay: .5s 
+.tr-delay-6
+ transition-delay: .6s 
+.tr-delay-7
+ transition-delay: .7s 
+.tr-delay-8
+ transition-delay: .8s              
+[data-animation]
+ opacity: 0 
+[data-animation].animated
+ opacity: 1  

@@ -50,10 +50,10 @@
   </nav>
   <main class="blog">
     <div class="blog__wrapper">
-      <h2>блог и новости</h2>
-      <h4>Наши текущие события</h4>
+      <h2 data-animation-container class="deg-anim">блог и новости</h2>
+      <h4 data-animation-container class="deg-anim">Наши текущие события</h4>
       <div class="grid">
-        <div class="grid-item article-1">
+        <div data-animation-container class="grid-item article-1 slide-up tr-delay-4">
           <div class="article-img">
             <img src="./img/blog/article-1.jpg" alt="">
           </div>
@@ -66,7 +66,7 @@
             <a href="#" class="article-button">подробнее</a>
           </div>
         </div>
-        <div class="grid-item grid-item--height2 article-2">
+        <div data-animation-container class="grid-item grid-item--height2 article-2 slide-up tr-delay-6">
           <div class="article-text">
             <div class="article-date">08 сентября 2021</div>
             <div class="article-title">
@@ -81,7 +81,7 @@
             <a href="#" class="article-button-white">подробнее</a>
           </div>
         </div>
-        <div class="grid-item article-1">
+        <div data-animation-container class="grid-item article-1 slide-up tr-delay-8">
           <div class="article-img">
             <img src="./img/blog/article-3.jpg" alt="">
           </div>
@@ -96,7 +96,7 @@
             <a href="#" class="article-button">подробнее</a>
           </div>
         </div>
-        <div class="grid-item grid-item--height2 article-4">
+        <div data-animation-container class="grid-item grid-item--height2 article-4 slide-up tr-delay-1">
           <div class="article-img">
             <img src="./img/blog/article-4.jpg" alt="">
           </div>
@@ -110,7 +110,7 @@
             <a href="#" class="article-button-white">подробнее</a>
           </div>
         </div>
-        <div class="grid-item grid-item--height2 article-3">
+        <div data-animation-container class="grid-item grid-item--height2 article-3 slide-up tr-delay-5">
           <div class="article-text">
             <div class="article-date">08 сентября 2021</div>
             <div class="article-title">
@@ -125,7 +125,7 @@
             <a href="#" class="article-button">подробнее</a>
           </div>
         </div>
-        <div class="grid-item article-1">
+        <div  data-animation-container class="grid-item article-1 slide-up tr-delay-3">
           <div class="article-img">
             <img src="./img/blog/article-5.jpg" alt="">
           </div>
@@ -180,6 +180,8 @@
       </div>
     </div>
   </footer>
+  <script src="./js/jQuery2.2.0.js"></script>
+  <script src="./js/ScrollAnimations.js"></script>
   <script src="./js/masonry.js"></script>
   <script src="./js/burger.js"></script>
 </body>

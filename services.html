@@ -48,18 +48,18 @@
     <a href="#" class="vk-nav"><img src="./img/vk-nav.svg" alt=""></a>
   </nav>
   <main class="services">
-    <h2>Услуги</h2>
+    <h2 data-animation-container class="deg-anim">Услуги</h2>
     <div class="services__preview">
       <div class="services__preview-photo">
-        <img src="./img/services/services-preview.jpg" alt="" class="preview-desktop">
-        <img src="./img/services/preview-mobile.jpg" alt="" class="preview-mobile">
+        <img data-animation-container src="./img/services/services-preview.jpg" alt="" class="slide-left preview-desktop">
+        <img data-animation-container src="./img/services/preview-mobile.jpg" alt="" class=" preview-mobile">
       </div>
-      <div class="services__preview-text">
+      <div data-animation-container class="deg-anim services__preview-text">
         <h3>Pear agency</h3>
         <p>PeaR Agency предоставляет полный комплекс услуг по продвижению мероприятий: от разработки оригинальной
           концепции
           продвижения и до развернутого аналитического отчета по итогам. Мы знаем всё о продвижении мероприятий!</p>
-        <a href="#">контакты</a>
+        <a href="#" class="hover-effect">контакты</a>
       </div>
     </div>
     <div class="services__offer">
@@ -289,6 +289,7 @@
     </div>
   </footer>
   <script src="./js/jQuery2.2.0.js"></script>
+  <script src="./js/ScrollAnimations.js"></script>
   <script src="./js/swiper.js"></script>
   <script src="./js/services.js"></script>
   <script src="./js/burger.js"></script>

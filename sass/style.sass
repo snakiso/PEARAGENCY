@@ -27,7 +27,29 @@ a
  cursor: pointer
  a
    color: rgba(241, 255, 104, 1)
-@media screen and ( max-width: 900px )  
+.hover-effect:before
+  transition: transform .4s ease-out
+  transform-origin: 100% 100%   
+.hover-effect:after
+  content: ''
+  position: absolute
+  transform: none
+  left: auto
+  right: -50px
+  top: 6px 
+  width: 25px
+  height: 0
+  transition: transform .4s .2s ease-out,background-color .2s .3s ease-in,width .3s .2s ease-out,height .2s 0s ease-in
+  transform-origin: 0 0
+  will-change: transform, width , height, background
+.hover-effect:hover:after
+  width: calc(100% - 2px) 
+  height: 16px
+  background-color: rgba(34,34,34,.1)
+  transition: transform .4s .2s ease-out,background-color .2s .1s ease-out,width .4s .3s cubic-bezier(.4,0,.2,1),height .2s .1s cubic-bezier(.22,.61,.36,1)
+.hover-effect:hover:before  
+  background-color: rgba(34,34,34,.05) !important
+ 
 @import 'header'
 @import 'main'
 @import 'lets'
@@ -44,3 +66,4 @@ a
 @import 'sport-case'
 @import 'contacts'
 @import 'nav-mobile'
+@import 'animations'

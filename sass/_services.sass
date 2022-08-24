@@ -13,11 +13,17 @@
   margin-bottom: 170px
   img
    width: 100%
+ &__preview-photo
+  position: relative  
  &__preview-text
    max-width: 350px
    display: flex
    flex-direction: column
    justify-content: center
+   .hover-effect:after
+    right: 0
+   .hover-effect:hover:after
+    width: calc( 100% - 20px )  
    h3
     font-size: 45px
     font-weight: 800
@@ -220,7 +226,7 @@
       font-size: 14px  
       max-width: 208px
     a
-      margin-top: 100px    
+      margin-top: 100px
    &__offer    
     h3
       font-size: 24px

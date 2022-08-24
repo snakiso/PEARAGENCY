@@ -41,6 +41,48 @@ a {
   color: rgb(241, 255, 104);
 }
 
+.hover-effect:before {
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  transition: -webkit-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+
+.hover-effect:after {
+  content: "";
+  position: absolute;
+  -webkit-transform: none;
+          transform: none;
+  left: auto;
+  right: -50px;
+  top: 6px;
+  width: 25px;
+  height: 0;
+  -webkit-transition: background-color 0.2s 0.3s ease-in, width 0.3s 0.2s ease-out, height 0.2s 0s ease-in, -webkit-transform 0.4s 0.2s ease-out;
+  transition: background-color 0.2s 0.3s ease-in, width 0.3s 0.2s ease-out, height 0.2s 0s ease-in, -webkit-transform 0.4s 0.2s ease-out;
+  transition: transform 0.4s 0.2s ease-out, background-color 0.2s 0.3s ease-in, width 0.3s 0.2s ease-out, height 0.2s 0s ease-in;
+  transition: transform 0.4s 0.2s ease-out, background-color 0.2s 0.3s ease-in, width 0.3s 0.2s ease-out, height 0.2s 0s ease-in, -webkit-transform 0.4s 0.2s ease-out;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  will-change: transform, width, height, background;
+}
+
+.hover-effect:hover:after {
+  width: calc(100% - 2px);
+  height: 16px;
+  background-color: rgba(34, 34, 34, 0.1);
+  -webkit-transition: background-color 0.2s 0.1s ease-out, width 0.4s 0.3s cubic-bezier(0.4, 0, 0.2, 1), height 0.2s 0.1s cubic-bezier(0.22, 0.61, 0.36, 1), -webkit-transform 0.4s 0.2s ease-out;
+  transition: background-color 0.2s 0.1s ease-out, width 0.4s 0.3s cubic-bezier(0.4, 0, 0.2, 1), height 0.2s 0.1s cubic-bezier(0.22, 0.61, 0.36, 1), -webkit-transform 0.4s 0.2s ease-out;
+  transition: transform 0.4s 0.2s ease-out, background-color 0.2s 0.1s ease-out, width 0.4s 0.3s cubic-bezier(0.4, 0, 0.2, 1), height 0.2s 0.1s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: transform 0.4s 0.2s ease-out, background-color 0.2s 0.1s ease-out, width 0.4s 0.3s cubic-bezier(0.4, 0, 0.2, 1), height 0.2s 0.1s cubic-bezier(0.22, 0.61, 0.36, 1), -webkit-transform 0.4s 0.2s ease-out;
+}
+
+.hover-effect:hover:before {
+  background-color: rgba(34, 34, 34, 0.05) !important;
+}
+
 .header {
   position: relative;
   display: -webkit-box;
@@ -266,11 +308,12 @@ a {
   background-image: url("../img/bg-photo.png");
   height: 100%;
   position: absolute;
-  width: 75%;
+  width: 68%;
   left: 0;
   background-repeat: no-repeat;
   opacity: 0.2;
   background-attachment: fixed;
+  background-size: contain;
 }
 .widecard__container {
   max-width: 900px;
@@ -325,6 +368,10 @@ a {
 @media screen and (max-width: 1920px) {
   .widecard__bg {
     width: 75%;
+  }
+  .widecard__bg .bg-photo {
+    width: 75%;
+    background-size: cover;
   }
 }
 @media screen and (max-width: 900px) {
@@ -387,6 +434,7 @@ a {
 }
 .examples__wrapper .example-img img {
   width: 100%;
+  height: 100%;
 }
 .examples__wrapper .example-mirror {
   -webkit-box-orient: horizontal;
@@ -639,9 +687,11 @@ a {
 }
 .about__photo {
   margin-top: 100px;
+  max-height: 600px;
 }
 .about__photo img {
   width: 100%;
+  height: 100%;
 }
 .about__definition {
   position: relative;
@@ -815,6 +865,9 @@ a {
 .services__preview img {
   width: 100%;
 }
+.services__preview-photo {
+  position: relative;
+}
 .services__preview-text {
   max-width: 350px;
   display: -webkit-box;
@@ -827,6 +880,12 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.services__preview-text .hover-effect:after {
+  right: 0;
+}
+.services__preview-text .hover-effect:hover:after {
+  width: calc(100% - 20px);
 }
 .services__preview-text h3 {
   font-size: 45px;
@@ -1757,4 +1816,118 @@ a {
 
 .nav-mobile.active {
   left: 0;
+}
+
+.deg-anim {
+  -webkit-transform: translateY(24px) skewX(-15deg);
+          transform: translateY(24px) skewX(-15deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: opacity 0.4s, -webkit-transform 1.2s;
+  transition: opacity 0.4s, -webkit-transform 1.2s;
+  transition: opacity 0.4s, transform 1.2s;
+  transition: opacity 0.4s, transform 1.2s, -webkit-transform 1.2s;
+  will-change: opacity, transform;
+  opacity: 0;
+}
+
+.deg-anim.animated {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.slide-down {
+  position: relative;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.slide-down.animated {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.slide-left {
+  position: relative;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.slide-left.animated {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.slide-up {
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: opacity 0.6s, -webkit-transform 0.6s;
+  transition: opacity 0.6s, -webkit-transform 0.6s;
+  transition: opacity 0.6s, transform 0.6s;
+  transition: opacity 0.6s, transform 0.6s, -webkit-transform 0.6s;
+  will-change: opacity, transform;
+}
+
+.slide-up.animated {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.tr-delay-1 {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.tr-delay-2 {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.tr-delay-3 {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.tr-delay-4 {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.tr-delay-5 {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.tr-delay-6 {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.tr-delay-7 {
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+.tr-delay-8 {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+[data-animation] {
+  opacity: 0;
+}
+
+[data-animation].animated {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
