@@ -9,18 +9,22 @@
  transform: none
 .slide-down
  position: relative
- transform: scaleY(0)
+ transform: translateY(-50%)
  transform-origin: top
  transition: all 0.5s
+ opacity: 0
 .slide-down.animated
- transform: scaleY(1)
+ transform: none
+ opacity: 1
 .slide-left
  position: relative
- transform: scaleX(0)
+ transform: translateX(-30%)
  transform-origin: left
  transition: all 0.5s
+ opacity: 0
 .slide-left.animated
- transform: scaleX(1)
+ transform: translateX(0%)
+ opacity: 1
 .slide-up
  opacity: 0
  transform: translateY(100px)
@@ -44,7 +48,9 @@
 .tr-delay-7
  transition-delay: .7s 
 .tr-delay-8
- transition-delay: .8s              
+ transition-delay: .8s   
+.tr-delay-9
+ transition-delay: .9s              
 [data-animation]
  opacity: 0 
 [data-animation].animated

@@ -2,6 +2,7 @@ body
  margin: 0
  font-family: 'Montserrat', sans-serif
  font-weight: 700
+ position: relative
 .page-wrapper
  margin: auto
  max-width: 920px
@@ -49,7 +50,9 @@ a
   transition: transform .4s .2s ease-out,background-color .2s .1s ease-out,width .4s .3s cubic-bezier(.4,0,.2,1),height .2s .1s cubic-bezier(.22,.61,.36,1)
 .hover-effect:hover:before  
   background-color: rgba(34,34,34,.05) !important
- 
+@media screen and ( max-width: 1920px ) 
+  body
+    overflow-x: hidden 
 @import 'header'
 @import 'main'
 @import 'lets'

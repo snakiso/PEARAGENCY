@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   <title>Document</title>
 </head>
 
@@ -50,10 +51,17 @@
   </nav>
   <main class="main">
     <section class="lets">
+      <div id="scene">
+        <div data-depth="0.2"><img src="./img/circle-bg.png" alt=""></div>
+        <div data-depth="0.6"><img src="./img/triangle-bg.png" alt=""></div>
+        <div data-depth="0.9"><img src="./img/line-bg.png" alt=""></div>
+      </div>
       <img src="./img/header-bg.png" alt="" class="header-bg">
-      <h2 data-animation-container  class="deg-anim">PEAR</h2>
-      <h4 data-animation-container  class="deg-anim">AGENCY</h4>
-      <button  data-animation-container  class="button lets__button deg-anim" >let’s PeaR!</button>
+      <div class="lets__title">
+        <h2 data-animation-container class="deg-anim">PEAR</h2>
+        <h4 data-animation-container class="deg-anim">AGENCY</h4>
+        <button data-animation-container class="button lets__button deg-anim">let’s PeaR!</button>
+      </div>
       <div class="lets__block">
         <span data-animation-container class="deg-anim">let's PeaR!</span>
         <h4 data-animation-container class="deg-anim">Pear agency</h4>
@@ -161,11 +169,11 @@
       <div class="clients__wrapper">
         <h2 data-animation-container class="deg-anim">Клиенты</h2>
         <div data-animation-container class="deg-anim clients__block">
-          <a href="#"><img src="./img/client-1.svg" alt=""></a>
-          <a href="#"><img src="./img/client-2.svg" alt=""></a>
-          <a href="#"><img src="./img/client-3.svg" alt=""></a>
-          <a href="#"><img src="./img/client-4.svg" alt=""></a>
-          <a href="#"><img src="./img/client-5.svg" alt=""></a>
+          <a data-animation-container href="#" class="deg-anim tr-delay-1"><img src="./img/client-1.svg" alt=""></a>
+          <a data-animation-container href="#" class="deg-anim tr-delay-3"><img src="./img/client-2.svg" alt=""></a>
+          <a data-animation-container href="#" class="deg-anim tr-delay-5"><img src="./img/client-3.svg" alt=""></a>
+          <a data-animation-container href="#" class="deg-anim tr-delay-7"><img src="./img/client-4.svg" alt=""></a>
+          <a data-animation-container href="#" class="deg-anim tr-delay-9"><img src="./img/client-5.svg" alt=""></a>
         </div>
       </div>
     </section>
@@ -177,7 +185,7 @@
           <div class="swiper-wrapper">
             <!--swiper-slide start-->
             <div class="swiper-slide">
-              <div class="slide-content">
+              <div class="slide-content slide-left">
                 <p>Много раз сотрудничали по проектам различной направленности (социальные, творческие, научные и др.) с
                   Тихоном
                   и всегда
@@ -200,7 +208,7 @@
             <!--swiper-slide end-->
             <!--swiper-slide start-->
             <div class="swiper-slide">
-              <div class="slide-content">
+              <div class="slide-content slide-left">
                 <p>“Под моим руководством Тихон занимался продвижением и PR сопровождением более 10 мероприятий
                   различных по
                   масштабу и
@@ -225,7 +233,7 @@
             <!--swiper-slide end-->
             <!--swiper-slide start-->
             <div class="swiper-slide">
-              <div class="slide-content">
+              <div class="slide-content slide-left">
                 <p>“Тихон - ответственный PR-специалист, с которым мы много раз работали на разных мероприятиях. Он
                   умеет
                   работать со СМИ,

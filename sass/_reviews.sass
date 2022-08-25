@@ -23,6 +23,12 @@
   .swiper-wrapper
    display: flex
    height: 100%
+   .slide-left
+    transform: translateX(-50%)
+    transition-delay: 1s
+   .swiper-slide-active .slide-left
+    transform: translateX(0%)
+    opacity: 1   
   .swiper-slide
    position: relative
    display: flex
