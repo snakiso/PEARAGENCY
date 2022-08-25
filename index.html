@@ -56,7 +56,56 @@
         <div data-depth="0.6"><img src="./img/triangle-bg.png" alt=""></div>
         <div data-depth="0.9"><img src="./img/line-bg.png" alt=""></div>
       </div>
-      <img src="./img/header-bg.png" alt="" class="header-bg">
+    <!--<img src="./img/header-bg.png" alt="" class="header-bg">-->  
+      <!-- Canvas *****-->
+      <div class="paper paper--200 paper--gooey in-view" data-elements="PAPER_04">
+        <script>
+          var PAPER_04 = [
+            {
+              mobile: {
+                radius: 35,
+                center: { x: 20, y: -100 },
+                fillColor: "#F1FF68"
+              },
+              desktop: {
+                radius: 55,
+                center: { x: -430, y: -105 },
+                fillColor: "#F1FF68"
+              },
+            },
+            {
+              flatten: 32,
+              mobile: {
+                radius: 380,
+                center: { x: 400, y: -500 },
+                fillColor: "#F1FF68"
+              },
+              desktop: {
+                radius: 520,
+                center: { x: 760, y: -540 },
+                fillColor: "#F1FF68"
+              },
+            },
+            {
+              type: 'mask',
+              src: './img/canvas-2.jpg',
+              flatten: 32,
+              mobile: {
+                radius: 360,
+                center: { x: 420, y: -530 },
+                fillColor: "#F1FF68"
+              },
+              desktop: {
+                radius: 450,
+                center: { x: 0, y: 0 },
+                fillColor: "#F1FF68",
+              },
+            },
+          ];
+        </script>
+        <canvas data-paper-resize="true" data-paper-keepalive="true"></canvas>
+      </div>
+      <!-- Canvas *****-->
       <div class="lets__title">
         <h2 data-animation-container class="deg-anim">PEAR</h2>
         <h4 data-animation-container class="deg-anim">AGENCY</h4>
@@ -294,6 +343,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/lib.js"></script>
   <script src="./js/jQuery2.2.0.js"></script>
   <script src="./js/ScrollAnimations.js"></script>
   <script src="./js/swiper.js"></script>
