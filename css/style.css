@@ -15,6 +15,15 @@ html {
   max-width: 920px;
 }
 
+.bg {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+  background: #b9b9b9;
+  top: 0;
+  z-index: -1;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -463,6 +472,7 @@ a {
 }
 .examples__wrapper .example-img {
   overflow: hidden;
+  position: relative;
 }
 .examples__wrapper .example-img img {
   width: 100%;
@@ -732,10 +742,14 @@ a {
   margin-top: 100px;
   max-height: 600px;
   overflow: hidden;
+  position: relative;
 }
 .about__photo img {
   width: 100%;
   height: 100%;
+}
+.about__photo:last-child {
+  margin-bottom: 100px;
 }
 .about__definition {
   position: relative;
@@ -1051,6 +1065,7 @@ a {
 .services__cases {
   max-width: 920px;
   margin: auto;
+  padding-bottom: 100px;
 }
 .services__cases h3 {
   margin-top: 160px;
