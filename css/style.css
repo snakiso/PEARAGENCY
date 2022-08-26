@@ -2071,6 +2071,11 @@ a {
   opacity: 1;
 }
 
+@media screen and (max-width: 920px) {
+  .slide-down.animated {
+    height: 98%;
+  }
+}
 .paper {
   position: absolute;
   top: -30%;
