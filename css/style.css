@@ -2105,7 +2105,7 @@ a {
   height: 100%;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1279px) {
   .paper {
     display: none;
   }
