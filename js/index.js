@@ -345,8 +345,8 @@ function pixudio_gooey() {  //функция создания gooey
    scope = new paper.PaperScope(); //создали paper
 
   scope.setup(canvas);
-  scope.view.viewSize.width = canvas.clientWidth + 1200; // Ширина канваса 
-  scope.view.viewSize.height = canvas.clientHeight + 1200; // Высота канваса
+  scope.view.viewSize.width = canvas.clientWidth + 1000; // Ширина канваса 
+  scope.view.viewSize.height = canvas.clientHeight + 1000; // Высота канваса
 
   var tools = new scope.Tool(),  // настройки 
    drawing = false,
@@ -376,7 +376,7 @@ function pixudio_gooey() {  //функция создания gooey
     var cords = {
      center: {
       //  x: scope.view.center.x + shape[display].center.x,   // расположение относительно центра
-      x: scope.view.center.x + 500,
+      x: scope.view.center.x + 400,
       y: scope.view.center.y - 600
      }
     };
@@ -432,7 +432,7 @@ function pixudio_gooey() {  //функция создания gooey
     }
 
     shape.settings = settings;
-    shape.threshold = mesh.radius * 1.4; // коффециент увеличения внешнего круга от курсора
+    shape.threshold = mesh.radius * 1.6; // коффециент увеличения внешнего круга от курсора
     shape.circlePath = circlePath;
     shape.group = new scope.Group([circlePath]);
     shape.controlCircle = circlePath.clone();

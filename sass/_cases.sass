@@ -48,7 +48,8 @@
     height: 100%
     background-color: rgba(241, 255, 104, 1)
     margin: 0
-   li
+   li 
+    position: relative
     font-weight: 500
     padding-top: 20px
     padding-left: 25px
@@ -62,6 +63,20 @@
      position: absolute
      top: calc(50% - 1px)
      right: -40px 
+     transform: scaleX(1)
+    a:before 
+     content: ''
+     position: absolute
+     width: 25px
+     height: 2px
+     right: -40px
+     top: calc(50% - 1px)
+     background: black
+     transform: scaleX(0)
+     transition: all 0.3s
+     transform-origin: left
+    a:hover:before
+     transform: scaleX(1)   
    li:last-child
     padding-top: 50px
     a
@@ -71,7 +86,10 @@
      color: rgba(84, 52, 202, 1) !important
 @media screen and ( max-width: 920px )
  .cases
+  h4
+   margin: 25px 0
   .grid
+   margin-top: 0 
    max-width: 610px
 @media screen and ( max-width: 650px )
  .cases

@@ -17,4 +17,7 @@ hamburger.addEventListener('click', () => {
 
 
 var $containers = $('[data-animation]:not([data-animation-child]), [data-animation-container]');
+$('[data-animation-start]').scrollAnimations({
+ offset: 0.9
+});
 $containers.scrollAnimations();
