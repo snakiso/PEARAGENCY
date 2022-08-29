@@ -259,7 +259,8 @@ a {
 }
 .lets #scene {
   top: -100px;
-  left: -400px;
+  left: -270px;
+  z-index: -2;
 }
 .lets .header-bg {
   position: absolute;
@@ -2078,8 +2079,8 @@ a {
 }
 .paper {
   position: absolute;
-  top: -30%;
-  left: 55%;
+  top: -5%;
+  left: 63%;
   width: 100%;
   height: 100%;
   max-width: 1920px;
@@ -2102,7 +2103,9 @@ a {
 }
 
 .paper--200 {
-  height: 100%;
+  height: 650px;
+  width: 650px;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 1279px) {

@@ -345,8 +345,9 @@ function pixudio_gooey() {  //функция создания gooey
    scope = new paper.PaperScope(); //создали paper
 
   scope.setup(canvas);
-  scope.view.viewSize.width = canvas.clientWidth + 1000; // Ширина канваса 
-  scope.view.viewSize.height = canvas.clientHeight + 1000; // Высота канваса
+  scope.view.viewSize.width = canvas.clientWidth ; // Ширина канваса 
+  scope.view.viewSize.height = canvas.clientHeight ; // Высота канваса
+    console.log(scope.view.viewSize.width)
 
   var tools = new scope.Tool(),  // настройки 
    drawing = false,
@@ -376,8 +377,8 @@ function pixudio_gooey() {  //функция создания gooey
     var cords = {
      center: {
       //  x: scope.view.center.x + shape[display].center.x,   // расположение относительно центра
-      x: scope.view.center.x + 400,
-      y: scope.view.center.y - 600
+      x: scope.view.center.x + 0,
+      y: scope.view.center.y - 0
      }
     };
 
@@ -419,7 +420,7 @@ function pixudio_gooey() {  //функция создания gooey
      circlePath.smooth({ type: "asymmetric" }); // сглаживание углов
     }
 
-    var rotationMultiplicator = mesh.radius / 200;
+    var rotationMultiplicator = mesh.radius / 600; // коэф изменения формы ..?
     var settings = [];
     for (var ii = 0; ii < circlePath.segments.length; ii++) {
      settings.push({
@@ -432,7 +433,7 @@ function pixudio_gooey() {  //функция создания gooey
     }
 
     shape.settings = settings;
-    shape.threshold = mesh.radius * 1.6; // коффециент увеличения внешнего круга от курсора
+    shape.threshold = mesh.radius * 1.6; // коэффециент увеличения внешнего круга от курсора
     shape.circlePath = circlePath;
     shape.group = new scope.Group([circlePath]);
     shape.controlCircle = circlePath.clone();
