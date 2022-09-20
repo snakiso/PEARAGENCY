@@ -347,8 +347,6 @@ function pixudio_gooey() {  //функция создания gooey
   scope.setup(canvas);
   scope.view.viewSize.width = canvas.clientWidth ; // Ширина канваса 
   scope.view.viewSize.height = canvas.clientHeight ; // Высота канваса
-    console.log(scope.view.viewSize.width)
-
   var tools = new scope.Tool(),  // настройки 
    drawing = false,
    pageScrolling = false,
@@ -420,7 +418,7 @@ function pixudio_gooey() {  //функция создания gooey
      circlePath.smooth({ type: "asymmetric" }); // сглаживание углов
     }
 
-    var rotationMultiplicator = mesh.radius / 600; // коэф изменения формы ..?
+    var rotationMultiplicator = mesh.radius / 600 ; // коэф изменения формы ..? что то связанное с желтым кругом. Если делить на 1, то круг отсутствует. Предположительно, чем больше делитель, тем меньше анимации
     var settings = [];
     for (var ii = 0; ii < circlePath.segments.length; ii++) {
      settings.push({
@@ -433,7 +431,7 @@ function pixudio_gooey() {  //функция создания gooey
     }
 
     shape.settings = settings;
-    shape.threshold = mesh.radius * 1.6; // коэффециент увеличения внешнего круга от курсора
+    shape.threshold = mesh.radius * 1; // коэффециент увеличения внешнего круга от курсора
     shape.circlePath = circlePath;
     shape.group = new scope.Group([circlePath]);
     shape.controlCircle = circlePath.clone();
