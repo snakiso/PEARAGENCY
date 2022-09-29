@@ -1160,11 +1160,7 @@ a {
 }
 .blog .grid-item {
   width: 286px;
-  height: 480px;
   margin-bottom: 25px;
-}
-.blog .grid-item--height2 {
-  height: 524px;
 }
 .blog .article-1 {
   background-color: white;
@@ -1173,7 +1169,6 @@ a {
 .blog .article-1 .article-text {
   max-width: 233px;
   padding: 0 25px 0 25px;
-  height: 232px;
   position: relative;
 }
 .blog .article-1 .article-date {
@@ -1191,6 +1186,7 @@ a {
   font-size: 12px;
   font-weight: 500;
   line-height: 24px;
+  padding-bottom: 65px;
 }
 .blog .article-1 .article-button {
   position: absolute;
@@ -1304,6 +1300,8 @@ a {
   text-transform: uppercase;
   font-size: 12px;
   left: -20px;
+  display: inline-block;
+  margin-bottom: 15px;
 }
 .blog .article-4 .article-button-white:before {
   content: "";
@@ -1658,17 +1656,15 @@ a {
 .cases .grid .cases-nav {
   height: 100%;
 }
-.cases .grid .grid-item--height2 {
-  height: 522px !important;
-}
 .cases .grid .grid-item:first-child {
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
-  height: 480px !important;
+}
+.cases .grid .grid-item-nav {
+  position: relative;
 }
 .cases .grid .grid-item {
   position: relative;
-  width: 286px;
-  height: 480px;
+  min-width: 286px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 25px;
 }
@@ -1676,6 +1672,8 @@ a {
   margin-top: 25px;
   margin-left: 25px;
   max-width: 240px;
+  padding-bottom: 80px;
+  overflow: hidden;
 }
 .cases .grid .grid-item p {
   position: absolute;
@@ -1739,6 +1737,7 @@ a {
 }
 .cases .grid .grid-item li:last-child {
   padding-top: 50px;
+  padding-bottom: 30px;
 }
 .cases .grid .grid-item li:last-child a {
   text-transform: uppercase;

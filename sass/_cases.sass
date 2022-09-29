@@ -12,20 +12,24 @@
   .cases-nav
    height: 100%
   .grid-item--height2
-   height: 522px !important 
+   //height: 522px !important 
   .grid-item:first-child
    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25) 
-   height: 480px !important
+   //min-height: 480px !important
+  .grid-item-nav
+   position: relative
   .grid-item
    position: relative
-   width: 286px
-   height: 480px
+   min-width: 286px
+   //height: 480px
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
    margin-bottom: 25px
    h4
     margin-top: 25px
     margin-left: 25px
     max-width: 240px
+    padding-bottom: 80px
+    overflow: hidden
    p 
     position: absolute
     bottom: 30px
@@ -79,6 +83,7 @@
      transform: scaleX(1)   
    li:last-child
     padding-top: 50px
+    padding-bottom: 30px
     a
      text-transform: uppercase
      font-weight: 700 
